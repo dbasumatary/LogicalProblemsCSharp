@@ -53,5 +53,30 @@ namespace LogicalProblemsCSharp
                 Console.WriteLine(number + " is NOT a perfect number");
             }
         }
+
+        //UC3 - Prime Number
+        public void PrimeNumber()
+        {
+            Console.Write("Enter the number: ");
+            string userInput = Console.ReadLine();
+            int number = Convert.ToInt32(userInput);
+
+            bool isPrime = true;
+
+            for (int i = 2; i < number / 2; i++)
+            {
+                if (number % i == 0)
+                {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            if (isPrime)
+            {
+                Console.WriteLine(number + " is a Prime number");
+            }
+            else { Console.WriteLine(number + " is not a Prime number"); }
+        }
     }
 }

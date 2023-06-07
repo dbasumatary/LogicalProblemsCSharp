@@ -8,6 +8,7 @@
             LogicalProblems logicalProblems = new LogicalProblems();
             logicalProblems.FibonacciSeries();
             logicalProblems.PerfectNumber();
+            logicalProblems.PrimeNumber();
         }
     }
 }
