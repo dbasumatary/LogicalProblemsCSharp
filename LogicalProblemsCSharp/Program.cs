@@ -9,6 +9,7 @@
             logicalProblems.FibonacciSeries();
             logicalProblems.PerfectNumber();
             logicalProblems.PrimeNumber();
+            logicalProblems.ReverseNumber();
         }
     }
 }

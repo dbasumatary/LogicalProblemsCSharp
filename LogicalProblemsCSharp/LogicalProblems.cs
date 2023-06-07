@@ -78,5 +78,23 @@ namespace LogicalProblemsCSharp
             }
             else { Console.WriteLine(number + " is not a Prime number"); }
         }
+
+        //UC4 - Reverse Number
+        public void ReverseNumber()
+        {
+            Console.Write("Enter the number: ");
+            string userInput = Console.ReadLine();
+            int number = Convert.ToInt32(userInput);
+            Console.WriteLine("The original number is " + number);
+
+            int reverse = 0;
+            while (number != 0)
+            {
+                int remainder = number % 10;
+                reverse = reverse * 10 + remainder;
+                number = number / 10;
+            }
+            Console.WriteLine("The reversed number is " + reverse);
+        }
     }
 }
