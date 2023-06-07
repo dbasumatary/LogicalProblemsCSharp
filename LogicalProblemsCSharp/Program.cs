@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Logical Problems\n");
             LogicalProblems logicalProblems = new LogicalProblems();
-            logicalProblems.FibonacciSeries(9);
+            logicalProblems.FibonacciSeries(7);
             logicalProblems.PerfectNumber(29);
             logicalProblems.PrimeNumber(42);
             logicalProblems.ReverseNumber(49);
