@@ -6,10 +6,11 @@
         {
             Console.WriteLine("Logical Problems\n");
             LogicalProblems logicalProblems = new LogicalProblems();
-            logicalProblems.FibonacciSeries();
-            logicalProblems.PerfectNumber();
-            logicalProblems.PrimeNumber();
-            logicalProblems.ReverseNumber();
+            logicalProblems.FibonacciSeries(9);
+            logicalProblems.PerfectNumber(29);
+            logicalProblems.PrimeNumber(42);
+            logicalProblems.ReverseNumber(49);
+            logicalProblems.Stopwatch();
         }
     }
 }

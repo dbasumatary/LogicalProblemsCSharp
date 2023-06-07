@@ -9,31 +9,25 @@ namespace LogicalProblemsCSharp
     public class LogicalProblems
     {
         //UC1 - Fibonacci Series
-        public void FibonacciSeries()
+        public int FibonacciSeries(int number)
         {
-            int firstNum = 0, secondNum = 1;
-            Console.Write("Enter the number up to which to see the Fibonacci series: ");
-            string userInput = Console.ReadLine();
-            int count = Convert.ToInt32(userInput);
+            int firstNum = 0, secondNum = 1, nextNum = 0;
 
             Console.Write("The Fibonacci series is : " + firstNum + " " + secondNum);
 
-            for (int i = 2; i < count; i++)
+            for (int i = 2; i < number; i++)
             {
-                int nextNum = firstNum + secondNum;
+                nextNum = firstNum + secondNum;
                 Console.Write(" " + nextNum);
                 firstNum = secondNum;
                 secondNum = nextNum;
             }
+            return nextNum;
         }
 
         //UC2 - Perfect Number
-        public void PerfectNumber()
+        public bool PerfectNumber(int number)
         {
-            Console.Write("Enter the number: ");
-            string userInput = Console.ReadLine();
-            int number = Convert.ToInt32(userInput);
-
             int sum = 0;
             for (int i = 1; i < number; i++)
             {
@@ -47,20 +41,18 @@ namespace LogicalProblemsCSharp
             if (sum == number)
             {
                 Console.WriteLine(number + " is a perfect number");
+                return true;
             }
             else
             {
                 Console.WriteLine(number + " is NOT a perfect number");
+                return false;
             }
         }
 
         //UC3 - Prime Number
-        public void PrimeNumber()
+        public bool PrimeNumber(int number)
         {
-            Console.Write("Enter the number: ");
-            string userInput = Console.ReadLine();
-            int number = Convert.ToInt32(userInput);
-
             bool isPrime = true;
 
             for (int i = 2; i < number / 2; i++)
@@ -75,16 +67,17 @@ namespace LogicalProblemsCSharp
             if (isPrime)
             {
                 Console.WriteLine(number + " is a Prime number");
+                return true;
             }
-            else { Console.WriteLine(number + " is not a Prime number"); }
+            else { 
+                Console.WriteLine(number + " is not a Prime number");
+                return false;
+            }
         }
 
         //UC4 - Reverse Number
-        public void ReverseNumber()
-        {
-            Console.Write("Enter the number: ");
-            string userInput = Console.ReadLine();
-            int number = Convert.ToInt32(userInput);
+        public int ReverseNumber(int number)
+        {    
             Console.WriteLine("The original number is " + number);
 
             int reverse = 0;
@@ -95,6 +88,26 @@ namespace LogicalProblemsCSharp
                 number = number / 10;
             }
             Console.WriteLine("The reversed number is " + reverse);
+            return reverse;
+        }
+
+        //Stopwatch
+        public int Stopwatch()
+        {
+            Console.Write("Enter the start time: ");
+            string startInput = Console.ReadLine();
+            DateTime startTime = DateTime.Now;
+            Console.WriteLine(startTime.ToString());
+
+            Console.Write("Enter the end time: ");
+            string endInput = Console.ReadLine();
+            DateTime endTime = DateTime.Now;
+            Console.WriteLine(endTime.ToString());
+
+            Console.WriteLine();
+            TimeSpan elapsedTime = endTime - startTime;
+            Console.WriteLine("The elapsed time is " + elapsedTime.TotalSeconds + " seconds");
+            return (int)elapsedTime.TotalSeconds;
         }
     }
 }
