@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Logical Problems\n");
+            LogicalProblems logicalProblems = new LogicalProblems();
+            logicalProblems.FibonacciSeries();
         }
     }
 }
